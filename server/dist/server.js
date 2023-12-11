@@ -9,6 +9,9 @@ const app = (0, express_1.default)();
 const PORT = 3000;
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
+app.get("/", (req, res) => {
+    res.send("Hi");
+});
 app.listen(PORT, () => {
     console.log(`Server is Listening at ${PORT}`);
 });
